@@ -21,18 +21,18 @@ public class Calculatrice extends JFrame {
     JButton[] tab_button = new JButton[tab_string.length];
     private JLabel ecran = new JLabel();
     // private Dimension dim = new Dimension(60, 40);
-    private Dimension dim2 = new Dimension(80, 51);
+    private Dimension dim2 = new Dimension(60,25);
 
     private double chiffre1;
     private boolean clicOperateur = false, update = false;
     private String operateur = "";
 
     public Calculatrice(){
-        this.setSize(800, 300);
+        this.setSize(540,218);
         this.setTitle("Calculette");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setResizable(true);
+        this.setResizable(false);
         //On initialise le conteneur avec tous les composants
         initComposant();
         //On ajoute le conteneur
@@ -47,16 +47,16 @@ public class Calculatrice extends JFrame {
         ecran.setFont(police);
         //On aligne les informations à droite dans le JLabel
         ecran.setHorizontalAlignment(JLabel.RIGHT);
-        ecran.setPreferredSize(new Dimension(90, 20));
+        ecran.setPreferredSize(new Dimension(490,20));
         JPanel operateur = new JPanel();
-        operateur.setPreferredSize(new Dimension(155, 85));
+        operateur.setPreferredSize(new Dimension(70,205));
         JPanel chiffre = new JPanel();
-        chiffre.setPreferredSize(new Dimension(285, 115));
+        chiffre.setPreferredSize(new Dimension(220,205));
         JPanel panEcran = new JPanel();
-        panEcran.setPreferredSize(new Dimension(860, 25));
+        panEcran.setPreferredSize(new Dimension(490,25));
 
         JPanel charakter = new JPanel();
-        charakter.setPreferredSize(new Dimension (260, 120));
+        charakter.setPreferredSize(new Dimension (220,205));
         //On parcourt le tableau initialisé
         //afin de créer nos boutons
         for(int i = 0; i < tab_string.length; i++){
@@ -69,113 +69,125 @@ public class Calculatrice extends JFrame {
                 case 11 :
 
                     tab_button[i].addActionListener(new EgalListener());
+                    tab_button[i].setPreferredSize(dim2);
                     chiffre.add(tab_button[i]);
                     break;
                 case 12 :
                     tab_button[i].setForeground(Color.red);
-                    // tab_button[i].addActionListener(new ResetListener());
+                    tab_button[i].addActionListener(new ResetListener());
+                    tab_button[i].setPreferredSize(dim2);
                     operateur.add(tab_button[i]);
                     break;
                 case 13 :
                     tab_button[i].addActionListener(new PlusListener());
-                    //  tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     operateur.add(tab_button[i]);
                     break;
                 case 14 :
                     tab_button[i].addActionListener(new MoinsListener());
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     operateur.add(tab_button[i]);
                     break;
                 case 15 :
                     tab_button[i].addActionListener(new MultiListener());
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     operateur.add(tab_button[i]);
                     break;
                 case 16 :
                     tab_button[i].addActionListener(new DivListener());
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     operateur.add(tab_button[i]);
                     break;
 
                 case 17:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     chiffre.add(tab_button[i]);
                     break;
                 case 18:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     chiffre.add(tab_button[i]);
                     break;
                 case 19:
-                    //  tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     chiffre.add(tab_button[i]);
                     break;
                 case 20:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 21:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 22:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
 
                 case 23:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 24:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 25:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 26:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 27:
-                    //tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 28:
-                    //  tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 29:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 30:
-                    //  tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 31:
-                    //  tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
                 case 32:
-                    // tab_button[i].setPreferredSize(dim2);
+                    tab_button[i].setPreferredSize(dim2);
                     charakter.add(tab_button[i]);
                     break;
+                case 33:
+                    tab_button[i].setPreferredSize(dim2);
+                    charakter.add(tab_button[i]);
+                    break;
+                case 34:
+                    tab_button[i].setPreferredSize(dim2);
+                    charakter.add(tab_button[i]);
+                    break;
+
                 default :
                     //Par défaut, ce sont les premiers éléments du tableau
                     //donc des chiffres, on affecte alors le bon listener
                     chiffre.add(tab_button[i]);
                     tab_button[i].addActionListener(new ChiffreListener());
+                    tab_button[i].setPreferredSize(dim2);
                     break;
             }
         }
         panEcran.add(ecran);
         panEcran.setBorder(BorderFactory.createLineBorder(Color.black));
         container.add(panEcran, BorderLayout.NORTH);
-        container.add(chiffre, BorderLayout.CENTER);
+        container.add(chiffre, BorderLayout.EAST);
         container.add(operateur, BorderLayout.WEST);
-        container.add(charakter, BorderLayout.EAST);
+        container.add(charakter, BorderLayout.CENTER);
     }
 
     //Méthode permettant d'effectuer un calcul selon l'opérateur sélectionné
